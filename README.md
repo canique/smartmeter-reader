@@ -6,7 +6,7 @@ This project deals with the Smartmeter Landis + Gyr E450 which is (in my case) o
 - Smartmeter Landis + Gyr E450
 - Raspberry Pi
 - Python 3
-- IR Schreib/Lesekopf USB (Optokopf) (Norm: IEC-62056-21). I used this one https://shop.weidmann-elektronik.de/index.php?page=product&info=24)
+- Canique Infrared smartmeter reader (Low Power)
 
 ## Install requirements
 ```
