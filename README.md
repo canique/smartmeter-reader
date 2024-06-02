@@ -6,7 +6,7 @@ This project deals with the Smartmeter Landis + Gyr E450 which is (in my case) o
 - Smartmeter Landis + Gyr E450
 - Raspberry Pi
 - Python 3
-- Canique Infrared smartmeter reader (Low Power)
+- Canique Infrared smartmeter reader (Low Power, with UART connector)
 
 ## Install requirements
 ```
