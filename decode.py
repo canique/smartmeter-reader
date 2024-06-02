@@ -44,7 +44,11 @@ def verify_crc16(input, skip=0, last=2, cut=0):
 from Crypto.Cipher import AES
 def decode_packet(input):  ##expects input to be bytearray.fromhex(hexstring), full packet  "7ea067..7e"
     if verify_crc16(input, 1, 2, 1):
-        nonce=bytes(input[14:22]+input[24:28])  #systemTitle+invocation counter
+        systemTitle=input[14:22]
+        serialNr=systemTitle[4:8]
+        serialNr[0]=serialNr[0] & 0x0F
+        logging.info("device {}{}".format((systemTitle[0:3]).decode("utf-8"), struct.unpack(">L", serialNr)[0]))
+        nonce=bytes(systemTitle+input[24:28])  #systemTitle+invocation counter
         cipher=AES.new(binascii.unhexlify(config.key), AES.MODE_CTR, nonce=nonce, initial_value=2)
         return cipher.decrypt(input[28:-3])
     else:
