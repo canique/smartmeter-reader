@@ -33,7 +33,7 @@ Check if there is data on the serial port.
 
 ```
 stty -F /dev/ttyUSB0 9600 -parenb cs8 -cstopb -ixoff -crtscts -hupcl -ixon -opost -onlcr -isig -icanon -iexten -echo -echoe -echoctl -echoke 
-cat /dev/ttyUSB0 | hexdump
+cat /dev/serial0 | hexdump
 ```
 (from https://shop.weidmann-elektronik.de/media/files_public/9d73b590bf0752a5beff32d229d4497d/HowToRaspberryPi.pdf)
 
