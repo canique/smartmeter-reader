@@ -3,6 +3,7 @@
 
 import binascii
 import logging
+import datetime
 
 #internal imports
 import config
@@ -62,9 +63,14 @@ def bytes_to_int(bytes):
     return result
 
 def parse_msg(s):
+    year = bytes_to_int(s[22:24])
+    if (datetime.date.today().year != year):
+        logging.info("Skipping msg with wrong year {}. Wrong AES key?".format(year))
+        return None
+        
     m = {
         "dateTime" : {
-            "year" : bytes_to_int(s[22:24]),
+            "year" : year,
             "month" : bytes_to_int(s[24:25]),
             "day" : bytes_to_int(s[25:26]),
             "hour" : bytes_to_int(s[27:28]),
