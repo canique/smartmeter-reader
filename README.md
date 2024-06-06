@@ -1,6 +1,10 @@
 # Smartmeter Reader for Landis + Gyr E450 / ISKRA AM550
 
-This project deals with the Smartmeter Landis + Gyr E450 / ISKRA AM550 which are (in my case) operated by Wiener Netze. It reads the data from the optical user interface (de: Kundenschnittstelle).
+This project deals with the Smartmeters
+ - Landis + Gyr E450
+ - ISKRA AM550
+
+ It has been tested against these smartmeters operated by Wiener Netze. It reads the data from the optical user interface (de: Kundenschnittstelle).
 
 ## Requirements
 - Smartmeter Landis + Gyr E450 or ISKRA AM550
