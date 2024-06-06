@@ -1,9 +1,9 @@
 # Smartmeter Reader for Landis + Gyr E450
 
-This project deals with the Smartmeter Landis + Gyr E450 which is (in my case) operated by Wiener Netze. It reads the data from the optical user  interface (de: Kundenschnittstelle).
+This project deals with the Smartmeter Landis + Gyr E450 / ISKRA AM550 which are (in my case) operated by Wiener Netze. It reads the data from the optical user interface (de: Kundenschnittstelle).
 
 ## Requirements
-- Smartmeter Landis + Gyr E450
+- Smartmeter Landis + Gyr E450 or ISKRA AM550
 - Raspberry Pi
 - Python 3
 - Canique Infrared smartmeter reader (Low Power, with UART connector)
