@@ -42,7 +42,9 @@ def parseData():
             
             # remove processed contents from data
             del data[0:(mStart + mLen + 2)]
-            msgs.append(decode.parse_msg(decodedMsg))
+            parsedMsg = decode.parse_msg(decodedMsg)
+            if parsedMsg != None:
+                msgs.append(parsedMsg)
         else:
             msgFound = False
 
